@@ -81,13 +81,13 @@ if __name__ == "__main__":
             for row in reader:
                 cand_judet[row[0]] = row[1]
 
-    # genereaza primii_15.csv si primii_15.txt
+    # genereaza primii_15.csv 
     with open('primii15.csv', 'w') as f:
         csvwriter = csv.writer(f)
         for name, score in cand_score[:15]:
             csvwriter.writerow([name, score])
 
-    # afiseaza lista burta
+    # afiseaza lista bruta
     print "Lista bruta"
     for (loc, (name, score)) in enumerate(cand_score):
         if len(sys.argv) == 2:
